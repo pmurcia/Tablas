@@ -1,6 +1,6 @@
 <ul>
 <% @subjects.each do |subject| %>
-  <li><%= link_to(subject.name, subject_path(subject)) %> <%= link_to('Edit', edit_subject_path(subject)) %> <%= link_to('Delete', subject_path(subject), method: :delete) %></li>
+  <li><%= link_to(subject.name, subject_path(subject)) %> <%= link_to('Editar', edit_subject_path(subject)) %> <%= link_to('Borrar', subject_path(subject), method: :delete) %></li>
 <% end %>
 </ul>
 
