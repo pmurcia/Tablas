@@ -1,23 +1,22 @@
 class SubjectsController < ApplicationController
-	class MateriasController < ApplicationController
   def index
-    @materias = Materia.all
+    @subjects = Subject.all
   end
 
   def show
-  	@materia = Materia.find params[:id]
+  	@subject = Subject.find params[:id]
   end
 
   def new
-  	@materia = Materia.new
+  	@subject = Subject.new
   end
 
   def create
-  	binding.pry
-  	@materia = Materia.create name:params[:materia][:name]
+  	# binding.pry
+  	@subject = Subject.create name:params[:subject][:name]
 
-  	if @materia.save
-  	  redirect_to action: 'index', controller: 'materias'
+  	if @subject.save
+  	  redirect_to action: 'index', controller: 'subjects'
   	else
   	  render 'new'
   	end
