@@ -8,7 +8,7 @@ class MateriasController < ApplicationController
   end
 
   def new
-
+  	@materia = Materia.new
   end
 
   def create
