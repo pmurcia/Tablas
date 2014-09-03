@@ -17,3 +17,18 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(function(){
+
+$('#modal').on('click', function(){
+	$('#loginModal').foundation('reveal', 'open');
+});
+
+$('#modal2').on('click', function(){
+	$('#registerModal').foundation('reveal', 'open');
+});
+
+$('#modalcomments').on('click', function(){
+	$('#commentsModal').foundation('reveal', 'open');
+});
+});
