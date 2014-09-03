@@ -39,7 +39,15 @@ class SubjectsController < ApplicationController
   end
 
   def destroy
+  	@subject = Subject.find params[:id]
 
+  	if @subject.destroy
+  	  flash[:notice] = 'Borrada con éxito'
+  	  redirect_to action:'index', controller:'subjects'
+  	else
+  	  flash[:notice] = 'No ha podido ser borrada'
+  	  redirect_to action:'index', controller:'subjects'
+  	end
   end
 end
 
