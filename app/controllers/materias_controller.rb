@@ -12,7 +12,13 @@ class MateriasController < ApplicationController
   end
 
   def create
+  	@materia = Materia.create name:params[:materia][:name]
 
+  	if @materia.save
+  	  redirect_to action: 'index', controller: 'materias'
+  	else
+  	  render 'new'
+  	end
   end
 
   def update
