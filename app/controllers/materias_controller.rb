@@ -1,6 +1,6 @@
 class MateriasController < ApplicationController
   def index
-
+    @materias = Materia.all
   end
 
   def show
