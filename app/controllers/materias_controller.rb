@@ -4,7 +4,7 @@ class MateriasController < ApplicationController
   end
 
   def show
-
+  	@materia = Materia.find params[:id]
   end
 
   def new
