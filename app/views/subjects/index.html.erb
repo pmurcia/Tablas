@@ -1,3 +1,7 @@
+<ul>
 <% @subjects.each do |subject| %>
-  <%= link_to(subject.name, subject_path(subject)) %>
+  <li><%= link_to(subject.name, subject_path(subject)) %></li>
 <% end %>
+</ul>
+
+<%= button_to('Nueva asignatura', new_subject_path, method: :get) %>
